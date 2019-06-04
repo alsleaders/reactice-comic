@@ -11,8 +11,15 @@ body {
   margin: 1rem 3rem;
   min-height: 100%;
   background: #96a8c8;
+  text-align: center;
+  font-size: 16px;
+  font-variant: small-caps;
+  font-weight: 500;
 }
 
+h1 {
+  font-size: 42px;
+}
 .boxes {
   border: 0.1rem black solid;
   border-radius: 12px;
@@ -24,4 +31,13 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.text > p {
+  margin: 15px;
+}
+
+ul {
+  list-style: none;
 }
