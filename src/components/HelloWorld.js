@@ -31,7 +31,7 @@ export default function HelloWorld() {
   return (
     <section>
       <div className="boxes">
-        <h1>XKCD</h1>
+        <h1>RANDOM XKCD</h1>
       </div>
       <div className="boxes">
         <section>
