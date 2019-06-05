@@ -13,11 +13,12 @@ export default function HelloWorld() {
 
   useEffect(() => {
     //make api call
-    axios.get(`${API_URL}/${number}`).then(resp => {
-      console.log(resp.data)
-      setComic(resp.data)
-      console.log({ comic })
-    })
+    getComic(number)
+    // axios.get(`${API_URL}/${number}`).then(resp => {
+    //   console.log(resp.data)
+    //   setComic(resp.data)
+    //   console.log({ comic })
+    // })
   }, [])
 
   const getComic = number => {
