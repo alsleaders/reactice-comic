@@ -1,6 +1,6 @@
 # Random XKCD Comic
 
-<img src="./src/images/RandomXKCD.png">
+<img className="be-smaller" src="./src/images/RandomXKCD.png">
 
 This page randomizes and displays an XKCD comic. This project allowed for individualized progress to meet the following objectives:
 
