@@ -8,6 +8,8 @@ export default function HelloWorld() {
   const [comic, setComic] = useState('')
   const [number, setNumber] = useState(Math.ceil(Math.random() * 2158))
 
+  console.log({ number })
+
   useEffect(() => {
     axios.get(`${API_URL}/${number}`).then(resp => {
       console.log(resp.data)
@@ -22,20 +24,23 @@ export default function HelloWorld() {
         <h1>XKCD</h1>
       </div>
       <div className="boxes">
-        <ul className="buttons">
-          <li>
-            <button onClick={() => setNumber()}>first</button>
-          </li>
-          <li>
-            {' '}
+        <section>
+          <h2>{comic.safe_title}</h2>
+          <ul className="buttons">
+            <button onClick={() => setNumber()}>←</button>
             <button onClick={() => setNumber(number - 1)}>previous</button>{' '}
-          </li>
-          <li />
-          <li>
+            <button
+              onClick={() => {
+                console.log('random')
+                return setNumber(Math.ceil(Math.random() * 2158))
+              }}
+            >
+              random
+            </button>{' '}
             <button onClick={() => setNumber(number + 1)}>next</button>{' '}
-          </li>
-          <li />
-        </ul>
+            <button onClick={() => setNumber()}>→</button>
+          </ul>
+        </section>
         <img src={comic.img} alt={comic.transcript} title={comic.alt} />
       </div>
       <div className="boxes text">

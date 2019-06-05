@@ -41,3 +41,22 @@ h1 {
 ul {
   list-style: none;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  background-color: #6e7b91;
+  color: #fff;
+  border: 1.5px solid #333;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 1.5px 12px;
+  margin: 0 4px;
+  text-decoration: none;
+}
