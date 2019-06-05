@@ -13,7 +13,7 @@ export default function HelloWorld() {
 
   useEffect(() => {
     getComic(number)
-  }, [])
+  }, [number])
 
   const getComic = number => {
     axios.get(`${API_URL}/${number}`).then(resp => {
@@ -37,7 +37,7 @@ export default function HelloWorld() {
         <section>
           <h2>{comic.safe_title}</h2>
           <ul className="buttons">
-            <button onClick={() => getComic(number - number + 1)}>←</button>
+            <button onClick={() => setNumber(1)}>←</button>
             <button onClick={() => getComic(number - 1)}>previous</button>
             <button onClick={() => getComic(Math.ceil(Math.random() * 2158))}>
               random
