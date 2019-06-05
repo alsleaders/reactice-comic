@@ -12,28 +12,18 @@ export default function HelloWorld() {
   console.log({ number })
 
   useEffect(() => {
-    //make api call
     getComic(number)
-    // axios.get(`${API_URL}/${number}`).then(resp => {
-    //   console.log(resp.data)
-    //   setComic(resp.data)
-    //   console.log({ comic })
-    // })
   }, [])
 
   const getComic = number => {
     axios.get(`${API_URL}/${number}`).then(resp => {
-      console.log(resp.data)
       setComic(resp.data)
-      console.log({ comic })
-      console.log({ number })
     })
     axios
       .get(
         'https://www.foaas.com/field/programmer/user/person in need of coffee'
       )
       .then(resp => {
-        console.log(resp.data)
         setSoThere(resp.data.message)
       })
   }
@@ -49,12 +39,7 @@ export default function HelloWorld() {
           <ul className="buttons">
             <button onClick={() => getComic(number - number + 1)}>←</button>
             <button onClick={() => getComic(number - 1)}>previous</button>
-            <button
-              onClick={() => {
-                console.log('random')
-                return getComic(Math.ceil(Math.random() * 2158))
-              }}
-            >
+            <button onClick={() => getComic(Math.ceil(Math.random() * 2158))}>
               random
             </button>
             <button onClick={() => getComic(number + 1)}>next</button>
