@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
 // let RANDOM = Math.ceil(Math.random() * 2158)
-const API_URL = 'https://xkcd.now.sh'
+const API_URL = 'https://xkcd.com'
 
 export default function HelloWorld() {
   const [comic, setComic] = useState('')
