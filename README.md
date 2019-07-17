@@ -12,3 +12,6 @@ This page randomizes and displays an XKCD comic. This project allowed for indivi
 </ul>
 
 I had a good time designing and implementing this creation. I hope you enjoy it.
+
+<h3> Technologies </h3>
+Thanks to https://github.com/mrmartineau/xkcd-api and https://www.foaas.com/ for the use of their APIs.
